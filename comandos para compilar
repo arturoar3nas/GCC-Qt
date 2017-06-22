@@ -1,0 +1,27 @@
+make
+arm-uclinuxeabi-gcc -Os -mcpu=cortex-m3 -mthumb -I /home/arturo/FK/A2F/root/usr/include -c -o hello.o util.o hello.c util.c
+arm-uclinuxeabi-gcc -mcpu=cortex-m3 -mthumb -L /home/arturo/FK/A2F/root/usr/include -o myexec hello.o util.o	
+
+make
+arm-uclinuxeabi-gcc -Os -mcpu=cortex-m3 -mthumb -I /home/arturo/FK/A2F/root/usr/include -c -o 2-lineLCD.o 2-lineLCD.c
+arm-uclinuxeabi-gcc -mcpu=cortex-m3 -mthumb -L /home/arturo/FK/A2F/root/usr/include -o 2-lineLCD 2-lineLCD.o	
+
+make
+arm-uclinuxeabi-gcc -Os -mcpu=cortex-m3 -mthumb -I /home/arturo/FK/A2F/root/usr/include -c -o 60-key.o 60-key.c
+arm-uclinuxeabi-gcc -mcpu=cortex-m3 -mthumb -L /home/arturo/FK/A2F/root/usr/include -o 60-key 60-key.o	
+
+
+make
+arm-uclinuxeabi-gcc -Os -mcpu=cortex-m3 -mthumb -I /home/arturo/FK/A2F/root/usr/include -c -o serialport.o serialport.c
+arm-uclinuxeabi-gcc -mcpu=cortex-m3 -mthumb -L /home/arturo/FK/A2F/root/usr/include -o serialport serialport.o	
+
+
+editar el make file y los comadmos de compilacion
+
+./configure --host=arm-linux-gnueabi --prefix=/usr/arm-linux-gnueabi CXX="arm-linux-gnueabi-g++"
+arm-uclinuxeabi-gcc -Os -mcpu=cortex-m3 -mthumb -I /home/hy/M3/linux-cortexm-1.10.0/A2F/root/usr/include -c -o serialport.o serialport.c
+arm-uclinuxeabi-gcc -mcpu=cortex-m3 -mthumb -L /home/hy/M3/linux-cortexm-1.10.0/A2F/root/usr/include -o serialport serialport.o	
+
+
+
+
